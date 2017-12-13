@@ -16,10 +16,12 @@ namespace LagoVista.PlatformManager
             {
                 switch (Device.RuntimePlatform)
                 {
-                    
+                    case Device.Android: return PlatformTypes.Android;
+                    case Device.iOS: return PlatformTypes.iPhone;
+                    case Device.UWP: return PlatformTypes.WindowsUWP;
                 }
 
-                return PlatformTypes.WindowsUWP;
+                throw new Exception("Unknown Platform");
             }
         }
 

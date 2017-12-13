@@ -2,19 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
+    <DebugType>Full</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LagoVista.Core" Version="1.2.134-alpha1626" />
-    <PackageReference Include="LagoVista.IoT.Deployment.Admin" Version="1.2.134-alpha1626" />
-    <PackageReference Include="LagoVista.IoT.DeviceAdmin" Version="1.2.134-alpha1626" />
-    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="1.2.134-alpha1626" />
-    <PackageReference Include="LagoVista.UserAdmin" Version="1.2.134-alpha1626" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\LagoVista.Client.Core\LagoVista.Client.Core.csproj" />
+    <PackageReference Include="LagoVista.Core" Version="1.2.181-alpha1716" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.209-alpha1059" />
+    <PackageReference Include="LagoVista.IoT.Deployment.Admin" Version="1.2.181-alpha1716" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.209-alpha1059" />
+    <PackageReference Include="LagoVista.UserAdmin" Version="1.2.181-alpha1716" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1-beta1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,5 @@
-﻿using LagoVista.Client.Core.ViewModels;
-using LagoVista.IoT.Runtime.Core.Models.Messaging;
+﻿using LagoVista.Client.Core.Models;
+using LagoVista.Client.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
