@@ -12,6 +12,7 @@
     <AssemblyName>LagoVista.PlatformManager.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,8 +50,9 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchExtraArgs>-v -v -v -v -v </MtouchExtraArgs>
+    <MtouchExtraArgs>-v -v -v -v -v  </MtouchExtraArgs>
     <MtouchLink>None</MtouchLink>
+    <MtouchFastDev>false</MtouchFastDev>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -88,6 +90,9 @@
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -97,11 +102,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Content Include="Entitlements.plist" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LagoVista.Client.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.209-alpha1059\lib\netstandard1.3\LagoVista.Client.Core.dll</HintPath>
+    <Reference Include="LagoVista.Client.Core, Version=1.2.1.1, Culture=neutral, PublicKeyToken=d788b1c9b90dabea, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.211-alpha1527\lib\netstandard1.3\LagoVista.Client.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.Core, Version=0.8.0.0, Culture=neutral, PublicKeyToken=2698135e9954a85d, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.Core.Networking.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.Core.dll</HintPath>
@@ -112,41 +119,32 @@
     <Reference Include="LagoVista.Core.Networking, Version=0.8.0.0, Culture=neutral, PublicKeyToken=650a46bd96014ff6, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.Core.Networking.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.Core.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.IoT.Deployment.Admin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Deployment.Admin.1.2.181-alpha1716\lib\netstandard1.3\LagoVista.IoT.Deployment.Admin.dll</HintPath>
+    <Reference Include="LagoVista.IoT.Deployment.Models, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.Deployment.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.Deployment.Models.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.IoT.DeviceAdmin, Version=0.8.1.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceAdmin.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.IoT.DeviceAdmin.dll</HintPath>
+    <Reference Include="LagoVista.IoT.DeviceAdmin.Models, Version=1.2.211.1131, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceAdmin.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.DeviceAdmin.Models.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.IoT.DeviceManagement.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceManagement.Core.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.IoT.DeviceManagement.Core.dll</HintPath>
+    <Reference Include="LagoVista.IoT.DeviceManagement.Models, Version=1.2.211.1114, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceManagement.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.DeviceManagement.Models.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.IoT.DeviceMessaging.Admin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceMessaging.Admin.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.IoT.DeviceMessaging.Admin.dll</HintPath>
+    <Reference Include="LagoVista.IoT.DeviceMessaging.Models, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceMessaging.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.DeviceMessaging.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Logging.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.IoT.Logging.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.Logging.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.IoT.Pipeline.Admin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Pipeline.Admin.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.IoT.Pipeline.Admin.dll</HintPath>
+    <Reference Include="LagoVista.IoT.Pipeline.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.Pipeline.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.IoT.Pipeline.Models.dll</HintPath>
     </Reference>
-    <Reference Include="LagoVista.MQTT.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.MQTT.Core.1.2.209-alpha1059\lib\netstandard1.3\LagoVista.MQTT.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="LagoVista.UserAdmin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.UserAdmin.1.2.181-alpha1716\lib\netstandard1.2\LagoVista.UserAdmin.dll</HintPath>
+    <Reference Include="LagoVista.UserAdmin.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.211-alpha1209\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.XPlat.Core.1.2.209-alpha1059\lib\netstandard1.3\LagoVista.XPlat.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.XPlat.iOS.1.2.209-alpha1059\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Amqp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Azure.Amqp.2.1.3\lib\netstandard1.3\Microsoft.Azure.Amqp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.EventHubs, Version=1.1.0.0, Culture=neutral, PublicKeyToken=7e34167dcc6d6d8c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Azure.EventHubs.1.1.0\lib\netstandard2.0\Microsoft.Azure.EventHubs.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.XPlat.1.2.211-alpha1527\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.Mobile, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Azure.Mobile.0.17.1\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.dll</HintPath>

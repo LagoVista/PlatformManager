@@ -34,7 +34,13 @@ namespace LagoVista.PlatformManager
 
         private void InitServices()
         {
-#if ENV_PROD
+#if ENV_MASTER
+            var serverInfo = new ServerInfo()
+            {
+                SSL = true,
+                RootUrl = "api.nuviot.com",
+            };
+#elif ENV_STAGE
             var serverInfo = new ServerInfo()
             {
                 SSL = true,
@@ -93,8 +99,7 @@ namespace LagoVista.PlatformManager
             }
             else
             {
-                var page = this.MainPage as LagoVistaNavigationPage;
-                if (page != null)
+                if (this.MainPage is LagoVistaNavigationPage page)
                 {
                     page.HandleURIActivation(uri);
                 }

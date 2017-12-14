@@ -1,19 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-<PropertyGroup>
-  <TargetFramework>netstandard1.4</TargetFramework>
-  <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
-  <DebugType>Full</DebugType>
-</PropertyGroup>
-
-<ItemGroup>
-  <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
-  <PackageReference Include="LagoVista.Core" Version="1.2.181-alpha1716" />
-  <PackageReference Include="LagoVista.Client.Core" Version="1.2.209-alpha1059" />
-</ItemGroup>
-
-<ItemGroup>
-  <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj" />
-</ItemGroup>
-
-
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.211-alpha1527" />
+    <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.IoT.Logging" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.211-alpha1209" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1-beta1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="LagoVista.Core" Version="1.2.211-alpha1209" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.211-alpha1527" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj" />
+  </ItemGroup>
 </Project>
