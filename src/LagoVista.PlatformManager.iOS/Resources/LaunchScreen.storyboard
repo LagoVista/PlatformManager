@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h" useSafeAreas="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="658" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="21" y="144" width="373" height="369"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="nuviot.png" fixedFrame="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="659" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="224" y="338" width="338" height="314"/>
+                                <variation key="heightClass=regular-widthClass=regular" image="nuviot.png" fixedFrame="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1536" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="182" y="22" width="373" height="369"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="nuviot.png" fixedFrame="YES"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="nuviot.png" fixedFrame="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="658"/>
+                            </mask>
+                        </variation>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="658"/>
+                                <exclude reference="659"/>
+                                <exclude reference="1536"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="659"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1536"/>
+                            </mask>
+                        </variation>
+                        <viewLayoutGuide key="safeArea" id="1756"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Landscape.png" width="1024" height="768"/>
+        <image name="Default-Portrait.png" width="768" height="1024"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-167.png" width="167" height="167"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="nuviot.png" width="256" height="256"/>
+        <image name="softwarelogistics.png" width="478" height="106"/>
+        <image name="splashbg.jpg" width="1170" height="877"/>
+    </resources>
+    <color key="tintColor" colorSpace="calibratedRGB" red="0.043137254901960784" green="0.043137254901960784" blue="0.87058823529411766" alpha="1"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="iPad"/>
+        <simulatedOrientationMetrics key="orientation"/>
+    </simulatedMetricsContainer>
+</document>

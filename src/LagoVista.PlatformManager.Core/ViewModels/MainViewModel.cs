@@ -50,7 +50,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
 
         protected override string GetListURI()
         {
-            return $"/api/org/{AuthManager.User.CurrentOrganization.Id}/deployment/instances";
+            return $"/api/deployment/instances";
         }
     }
 }
