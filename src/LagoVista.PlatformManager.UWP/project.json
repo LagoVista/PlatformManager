@@ -1,11 +1,11 @@
 ﻿{
   "dependencies": {
-    "LagoVista.Core": "1.2.134-alpha1626",
-    "LagoVista.Core.Authentication": "1.2.134-alpha1626",
-    "LagoVista.Core.Networking": "1.2.134-alpha1626",
-    "Microsoft.Azure.Mobile.Analytics": "0.15.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
-    "Newtonsoft.Json": "10.0.3"
+    "LagoVista.Core": "1.2.214-alpha1112",
+    "LagoVista.Core.Authentication": "1.2.214-alpha1112",
+    "LagoVista.Core.Networking": "1.2.214-alpha1112",
+    "Microsoft.Azure.Mobile.Analytics": "0.17.1",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.5",
+    "Newtonsoft.Json": "11.0.1-beta1"
   },
   "frameworks": {
     "uap10.0.10586": {}

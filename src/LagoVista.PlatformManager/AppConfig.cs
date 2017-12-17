@@ -1,4 +1,5 @@
 ﻿using LagoVista.Core.Interfaces;
+using LagoVista.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,26 +11,23 @@ namespace LagoVista.PlatformManager
 {
     public class AppConfig : IAppConfig
     {
-        public PlatformTypes PlatformType
+        public AppConfig()
         {
-            get
+            switch (Device.RuntimePlatform)
             {
-                switch (Device.RuntimePlatform)
-                {
-                    case Device.Android: return PlatformTypes.Android;
-                    case Device.iOS: return PlatformTypes.iPhone;
-                    case Device.UWP: return PlatformTypes.WindowsUWP;
-                }
-
-                throw new Exception("Unknown Platform");
+                case Device.Android: PlatformType = PlatformTypes.Android; break;
+                case Device.iOS: PlatformType = PlatformTypes.iPhone; break;
+                case Device.UWP: PlatformType = PlatformTypes.WindowsUWP; break;
             }
         }
 
-        public Environments Environment => Environments.Local;
+        public PlatformTypes PlatformType { get; private set; }
 
-        public string WebAddress => "http://localhost:5000";
+        public Environments Environment { get; set; }
 
-        public string AppName => "Platform Manager";
+        public string WebAddress { get; set; }
+
+        public string AppName => "IoT Platform Manager";
 
         public string AppLogo => "";
 
@@ -40,5 +38,6 @@ namespace LagoVista.PlatformManager
         public string AppId => "0200AC799F384D15B1D233E73793D416";
         public string ClientType => "mobileapp";
 
+        public VersionInfo Version { get; set; }
     }
 }

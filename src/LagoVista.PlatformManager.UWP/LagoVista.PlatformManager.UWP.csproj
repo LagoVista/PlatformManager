@@ -90,6 +90,11 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\Fonts\iconize-entypoplus.ttf" />
     <Content Include="Assets\Fonts\iconize-fontawesome.ttf" />
     <Content Include="Assets\Fonts\iconize-ionicons.ttf" />
@@ -131,7 +136,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="LagoVista.PlatformManager.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Icons\AV Receiver_100px.png" />
@@ -171,16 +175,55 @@
     <Content Include="Assets\Icons\Transistor_100px.png" />
     <Content Include="Assets\Icons\Turbocharger_100px.png" />
     <Content Include="Assets\Icons\Upload_100px.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\NuvIoT-128x128W.png" />
     <Content Include="Assets\NuvIoT-256x256W.png" />
     <Content Include="Assets\Settings_100px.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="nuviot.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="softwarelogistics.png" />
@@ -197,25 +240,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\LagoVista.Client.Core\LagoVista.Client.Core.csproj">
-      <Project>{786a2d0b-c3e4-4d7a-89c5-86ebc94e1b45}</Project>
-      <Name>LagoVista.Client.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.Core.UWP\Core UWP.csproj">
-      <Project>{12f1d893-a53b-44d6-9a9a-2922d9e7e38a}</Project>
-      <Name>Core UWP</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.MQTT.Core\LagoVista.MQTT.Core.csproj">
-      <Project>{d3bbe2f1-36e7-4ef3-b31c-e3b2b5250621}</Project>
-      <Name>LagoVista.MQTT.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.XPlat.Core\LagoVista.XPlat.Core.csproj">
-      <Project>{d5dd4ca3-3b5c-4a0e-aa82-4cebb9a7160d}</Project>
-      <Name>LagoVista.XPlat.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\LagoVista.XPlat.UWP\LagoVista.XPlat.UWP.csproj">
-      <Project>{9ed662b0-40c9-4899-b11e-f10c3c9d6aeb}</Project>
-      <Name>LagoVista.XPlat.UWP</Name>
+    <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj">
+      <Project>{b8746ab5-0c2b-45db-8483-3276dd5f7083}</Project>
+      <Name>LagoVista.PlatformManager.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\LagoVista.PlatformManager\LagoVista.PlatformManager.csproj">
       <Project>{b6e22604-c84f-488e-86e5-0fe8b30ab6b0}</Project>

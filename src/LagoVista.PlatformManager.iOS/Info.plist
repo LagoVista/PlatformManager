@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Loc Plt Mgr</string>
+	<string>Platform Mgr</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.software-logistics.platformmanager.localdev</string>
 	<key>CFBundleShortVersionString</key>
@@ -88,6 +88,6 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>Device Manager</string>
+	<string>Platform Mgr</string>
 </dict>
 </plist>
