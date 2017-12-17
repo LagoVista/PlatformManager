@@ -5,7 +5,7 @@
     <DebugType>Full</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.214-alpha1201" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.214-alpha1630" />
     <PackageReference Include="LagoVista.Core.Authentication" Version="1.2.214-alpha1112" />
     <PackageReference Include="LagoVista.Core.Networking" Version="1.2.214-alpha1112" />
     <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="1.2.214-alpha1112" />
@@ -23,7 +23,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1-beta1" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
     <PackageReference Include="LagoVista.Core" Version="1.2.214-alpha1112" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.214-alpha1201" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.214-alpha1630" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj" />

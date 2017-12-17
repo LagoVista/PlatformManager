@@ -15,6 +15,8 @@ namespace LagoVista.PlatformManager.Droid
             TabLayoutResource = Layout.Tabbar;
             ToolbarResource = Layout.Toolbar;
 
+            //https://console.firebase.google.com
+
             //https://play.google.com/apps/publish/?dev_acc=12258406958683843289
             LagoVista.XPlat.Droid.Startup.Init(BaseContext, MOBILE_CENTER_KEY);
 

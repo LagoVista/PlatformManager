@@ -13,7 +13,7 @@ using Android.Content.PM;
 
 namespace LagoVista.PlatformManager.Droid
 {
-    [Activity(Label = "Platform Mgr", MainLauncher =true, NoHistory = true, Theme = "@style/Theme.Splash", ConfigurationChanges = ConfigChanges.ScreenLayout | ConfigChanges.Orientation )]
+    [Activity(Label = "Platform Manager", MainLauncher =true, NoHistory = true, Theme = "@style/Theme.Splash", ConfigurationChanges = ConfigChanges.ScreenLayout | ConfigChanges.Orientation )]
     public class SplashScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)

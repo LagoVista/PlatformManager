@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="d57f133e-30d6-4410-9788-b71489743e11" Publisher="CN=kevinw" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="d57f133e-30d6-4410-9788-b71489743e11" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="SoftwareLogisticsLLC.IoTPlatformManager" Publisher="CN=610EF21F-3A3C-4783-B4BF-B7C267BC0CA0" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="6430cc43-8e5f-4401-84f1-a5e3f9c99e4b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>LagoVista.PlatformManager.UWP</DisplayName>
-    <PublisherDisplayName>kevinw</PublisherDisplayName>
+    <DisplayName>IoT Platform Manager</DisplayName>
+    <PublisherDisplayName>Software Logistics LLC</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
