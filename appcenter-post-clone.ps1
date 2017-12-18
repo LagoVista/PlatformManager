@@ -42,6 +42,11 @@ $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName
 $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName = $env:UWPAPPIDENTITY
 $storeContent.save($storeAssociationFile)
 
+$uwpAppFileContent = "$scriptPath\src\LagoVista.PlatformManager.UWP\App.xaml.cs"
+[string] $uwpAppFileContent = (Get-Content $assemblyInfoFile) -join "`r`n"
+$regEx = "MOBILE_CENTER_KEY = \""[0-9a-f\-]+\"";"
+$uwpAppFileContent -replace $regEx, "MOBILE_CENTER_KEY = ""$env:APPCENTERID""";
+
 $assemblyInfoFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\AssemblyInfo.cs"
 [string] $assemblyInfoContent = (Get-Content $assemblyInfoFile) -join "`r`n"
 $regEx = "assembly: AssemblyVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
