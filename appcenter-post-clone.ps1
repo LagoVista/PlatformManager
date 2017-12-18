@@ -17,6 +17,7 @@ function Generate-VersionNumber() {
 }
 
 $scriptPath = (Split-Path $MyInvocation.MyCommand.Path);
+$scriptPath
 
 "Copy Environment Specific Icons"
 $env:APPCENTER_BRANCH
@@ -29,28 +30,44 @@ $revisionNumber = Generate-VersionNumber
 $versionNumber = "$versionContent.$revisionNumber"
 "Done setting version: $versionNumber"
 
-$appmanifestFile = "$scriptPaths\src\LagoVista.PlatformManager.UWP\Package.appxmanifest"
+# Set the App Identity in the app manifest
+$appmanifestFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\Package.appxmanifest"
+$appmanifestFile
 [xml] $content = Get-Content  $appmanifestFile
 $content.Package.Identity.Name
 $content.Package.Identity.Name = $env:UWPAPPIDENTITY
 $content.Package.Identity.Version = $versionNumber
 $content.save($appmanifestFile)
 
+# Set the App Identity in the Store Association File
 $storeAssociationFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\Package.StoreAssociation.xml"
 [xml] $storeContent = (Get-Content  $storeAssociationFile) 
 $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName
 $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName = $env:UWPAPPIDENTITY
 $storeContent.save($storeAssociationFile)
 
-$uwpAppFileContent = "$scriptPath\src\LagoVista.PlatformManager.UWP\App.xaml.cs"
-[string] $uwpAppFileContent = (Get-Content $assemblyInfoFile) -join "`r`n"
+# Set the App Center Id for the current app.
+$uwpAppFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\App.xaml.cs"
+[string] $uwpAppFileContent = (Get-Content $uwpAppFile) -join "`r`n"
 $regEx = "MOBILE_CENTER_KEY = \""[0-9a-f\-]+\"";"
-$uwpAppFileContent -replace $regEx, "MOBILE_CENTER_KEY = ""$env:APPCENTERID""";
+$uwpAppFileContent = $uwpAppFileContent -replace $regEx, "MOBILE_CENTER_KEY = ""$env:APPCENTER_APPID"";";
+$uwpAppFileContent | Set-Content $uwpAppFile
+"Set $env:APPCENTERID in UWP\App.xaml.cs"
 
-$assemblyInfoFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\AssemblyInfo.cs"
+# Set the Version Numbers in the AssemblyInfo.cs file.
+$assemblyInfoFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\Properties\AssemblyInfo.cs"
 [string] $assemblyInfoContent = (Get-Content $assemblyInfoFile) -join "`r`n"
 $regEx = "assembly: AssemblyVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
 $assemblyInfoContent = $assemblyInfoContent -replace $regEx,  "assembly: AssemblyVersion(""$versionNumber"")"
 $regEx = "assembly: AssemblyFileVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
 $assemblyInfoContent = $assemblyInfoContent -replace $regEx,  "assembly: AssemblyFileVersion(""$versionNumber"")"
 $assemblyInfoContent | Set-Content  $assemblyInfoFile 
+"Set version $versionNumber in AssemblyInfo.cs"
+
+$mainAppFile = "$scriptPath\src\LagoVista.PlatformManager\App.xaml.cs"
+[string] $mainAppContent = (Get-Content $mainAppFile) -join "`r`n"
+$envRegEx = "#define ENV_[A-Z]+"
+$ucaseEnvironment = $env:APPCENTER_BRANCH.ToUpper();
+$mainAppContent = $mainAppContent -replace $envRegEx, "#define ENV_$ucaseEnvironment";
+$mainAppContent | Set-Content $mainAppFile
+"Set $env:APPCENTER_BRANCH in PlatformManager\App.xaml.cs"
