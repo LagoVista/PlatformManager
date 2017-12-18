@@ -120,6 +120,7 @@
     <BundleResource Include="Resources\softwarelogistics.png" />
     <BundleResource Include="Resources\splashbg.jpg" />
     <None Include="app.config" />
+    <None Include="appcenter-post-clone.sh" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>

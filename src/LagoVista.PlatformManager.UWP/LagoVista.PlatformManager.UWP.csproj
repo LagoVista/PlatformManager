@@ -122,7 +122,6 @@
     <Content Include="Assets\Fonts\RobotoCondensed-Light.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-LightItalic.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-Regular.ttf" />
-    <None Include="appcenter-post-clone.ps1" />
     <None Include="LagoVista.PlatformManager.UWP_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
