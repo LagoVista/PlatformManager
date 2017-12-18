@@ -7,6 +7,8 @@
     xmlns:ctl="clr-namespace:LagoVista.PlatformManager.Controls;assembly=LagoVista.PlatformManager"
     xmlns:trs="clr-namespace:LagoVista.PlatformManager;assembly=LagoVista.PlatformManager"
     LeftMenu="Cancel"
+    SettingsCommand="{Binding ManageCommand}"
+    RightMenu="Settings"
     Title="{trs:Translate InstanceView_Title}">
     <pge:LagoVistaContentPage.MainContent>
         <ScrollView>

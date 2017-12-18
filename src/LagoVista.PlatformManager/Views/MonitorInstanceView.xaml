@@ -8,6 +8,28 @@
     LeftMenu="Back"
     HasToolBar="true" >
     <pge:LagoVistaContentPage.MainContent>
-        <Label Text="Hello" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"  />
+                <RowDefinition Height="300"  />
+            </Grid.RowDefinitions>
+
+            <ListView ItemsSource="{Binding MessagesFromServer}" BackgroundColor="Black" Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding DateStamp}" TextColor="Yellow" FontFamily="Courier" />
+                                <Label Text="{Binding Text}" TextColor="Yellow" FontFamily="Courier" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </pge:LagoVistaContentPage.MainContent>
 </pge:LagoVistaContentPage>

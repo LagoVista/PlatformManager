@@ -10,16 +10,20 @@ namespace LagoVista.PlatformManager.Core.ViewModels
     {
         public InstanceViewModel()
         {
+            /* for now we just show a readonly view */
             InstanceTapCommand = new RelayCommand(InstanceTapped);
             ListenerTapCommand = new RelayCommand(ListenerTapped);
             PlannerTapCommand = new RelayCommand(PlannerTapped);
             MessageTypeTapCommand = new RelayCommand(MessageTypeTapped);
             PipelineModuleTapCommand = new RelayCommand(PipelineModuleTapped);
+            ManageCommand = new RelayCommand(InstanceTapped);
         }
+
+        
 
         public void InstanceTapped(object id)
         {
-            NavigateAndViewAsync<MonitorInstanceViewModel>(id.ToString());
+            NavigateAndViewAsync<MonitorInstanceViewModel>(LaunchArgs.ChildId);
         }
 
         public void ListenerTapped(object id)
@@ -68,5 +72,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         public RelayCommand PlannerTapCommand { get; private set; }
         public RelayCommand MessageTypeTapCommand { get; private set; }
         public RelayCommand PipelineModuleTapCommand { get; private set; }
+
+        public RelayCommand ManageCommand { get; private set; }
     }
 }

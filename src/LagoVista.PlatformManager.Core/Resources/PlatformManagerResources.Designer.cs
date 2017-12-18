@@ -20,7 +20,7 @@ namespace LagoVista.PlatformManager.Core.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class PlatformManagerResources {
@@ -130,6 +130,15 @@ namespace LagoVista.PlatformManager.Core.Resources {
         public static string InstanceDetails_Routes {
             get {
                 return ResourceManager.GetString("InstanceDetails_Routes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage.
+        /// </summary>
+        public static string InstanceView_Manage {
+            get {
+                return ResourceManager.GetString("InstanceView_Manage", resourceCulture);
             }
         }
         

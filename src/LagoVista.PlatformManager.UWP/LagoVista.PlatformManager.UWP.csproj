@@ -18,7 +18,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>LagoVista.PlatformManager.UWP_StoreKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>188328B6306B8ECE5A1A0F40EB6369162781341D</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>7E33D83DD98B3A19D1167B8782D9B05C0F834B28</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -122,6 +122,8 @@
     <Content Include="Assets\Fonts\RobotoCondensed-Light.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-LightItalic.ttf" />
     <Content Include="Assets\Fonts\RobotoCondensed-Regular.ttf" />
+    <None Include="appcenter-post-clone.ps1" />
+    <None Include="LagoVista.PlatformManager.UWP_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
