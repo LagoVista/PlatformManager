@@ -26,4 +26,3 @@ sed -i '' 's/public const string MOBILE_CENTER_KEY = .*/public const string MOBI
 
 # set the correct app center id for environment for Android
 sed -i '' 's/public const string MOBILE_CENTER_KEY = .*/public const string MOBILE_CENTER_KEY = \"'"$APPCENTERID"'\";/' $APPCENTER_SOURCE_DIRECTORY/src/LagoVista.Droid.Simulator/MainActivity.cs
-

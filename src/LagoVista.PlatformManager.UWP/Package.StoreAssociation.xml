@@ -360,7 +360,7 @@
   <ProductReservedInfo>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IoTPlatformManager-LocalDev</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>IoT Platform Manager - Dev</ReservedName>
+      <ReservedName>IoT Platform Manager - Stage</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
@@ -370,8 +370,13 @@
     <MainPackageIdentityName>SoftwareLogisticsLLC.EventKonnect</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.HarmanHWKHub</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IoTDeviceManager</MainPackageIdentityName>
+    <MainPackageIdentityName>SoftwareLogisticsLLC.IoTDeviceManager-Dev</MainPackageIdentityName>
+    <MainPackageIdentityName>SoftwareLogisticsLLC.IoTDeviceManager-Stage</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IoTPlatformManager</MainPackageIdentityName>
+    <MainPackageIdentityName>SoftwareLogisticsLLC.IoTPlatformManager-Dev</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IoTSimulator</MainPackageIdentityName>
+    <MainPackageIdentityName>SoftwareLogisticsLLC.IoTSimulator-Dev</MainPackageIdentityName>
+    <MainPackageIdentityName>SoftwareLogisticsLLC.IoTSimulator-Stage</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IPCameraUltimate</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.ISYAutomationPro</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.LagoVistaIoT</MainPackageIdentityName>
@@ -381,5 +386,5 @@
     <MainPackageIdentityName>SoftwareLogisticsLLC.TankBotFirmware</MainPackageIdentityName>
     <MainPackageIdentityName>SoftwareLogisticsLLC.YahamaAVRController</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9PLP01DPH6B4" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9PGZHBRW5CK1" />
 </StoreAssociation>
