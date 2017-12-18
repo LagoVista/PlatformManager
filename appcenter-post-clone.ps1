@@ -20,29 +20,29 @@ $scriptPath = (Split-Path $MyInvocation.MyCommand.Path);
 
 "Copy Environment Specific Icons"
 $env:APPCENTER_BRANCH
-Copy-Item -Path "..\..\BuildAssets\UWP\$env:APPCENTER_BRANCH\*"  -Destination ".\Assets" -Force
+Copy-Item -Path ".\BuildAssets\UWP\$env:APPCENTER_BRANCH\*"  -Destination ".\src\LagoVista.PlatformManager.UWP\Assets" -Force
 
-$versionFile = "$scriptPath\..\..\version.txt"
-$assemblyInfoFile = "$scriptPath\AssemblyInfo.cs"
+$versionFile = "$scriptPath\version.txt"
 
 [string] $versionContent = Get-Content $versionFile;
 $revisionNumber = Generate-VersionNumber
 $versionNumber = "$versionContent.$revisionNumber"
-$versionNumber
+"Done setting version: $versionNumber"
 
-$appmanifestFile = "$scriptPaths\Package.appxmanifest"
+$appmanifestFile = "$scriptPaths\src\LagoVista.PlatformManager.UWP\Package.appxmanifest"
 [xml] $content = Get-Content  $appmanifestFile
 $content.Package.Identity.Name
 $content.Package.Identity.Name = $env:UWPAPPIDENTITY
 $content.Package.Identity.Version = $versionNumber
 $content.save($appmanifestFile)
 
-$storeAssociationFile = "$scriptPath\Package.StoreAssociation.xml"
+$storeAssociationFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\Package.StoreAssociation.xml"
 [xml] $storeContent = (Get-Content  $storeAssociationFile) 
 $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName
 $storeContent.StoreAssociation.ProductReservedInfo.MainPackageIdentityName = $env:UWPAPPIDENTITY
 $storeContent.save($storeAssociationFile)
 
+$assemblyInfoFile = "$scriptPath\src\LagoVista.PlatformManager.UWP\AssemblyInfo.cs"
 [string] $assemblyInfoContent = (Get-Content $assemblyInfoFile) -join "`r`n"
 $regEx = "assembly: AssemblyVersion\(\""[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\""\)"
 $assemblyInfoContent = $assemblyInfoContent -replace $regEx,  "assembly: AssemblyVersion(""$versionNumber"")"
