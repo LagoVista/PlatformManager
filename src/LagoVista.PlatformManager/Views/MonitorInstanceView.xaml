@@ -23,7 +23,7 @@
                                     <ColumnDefinition Width="180" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding DateStamp}" TextColor="Yellow" FontFamily="Courier" />
+                                <Label Text="{Binding DateStamp, Converter={StaticResource DatePrinterConverter}}" TextColor="Yellow" FontFamily="Courier" />
                                 <Label Text="{Binding Text}" TextColor="Yellow" FontFamily="Courier" Grid.Column="1" />
                             </Grid>
                         </ViewCell>

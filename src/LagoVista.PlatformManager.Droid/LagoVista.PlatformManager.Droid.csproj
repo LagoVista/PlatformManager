@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LagoVista.Client.Core">
-      <Version>1.2.214-alpha1736</Version>
+      <Version>1.2.215-alpha1838</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.Core">
       <Version>1.2.214-alpha1112</Version>
@@ -81,7 +81,7 @@
       <Version>1.2.214-alpha1112</Version>
     </PackageReference>
     <PackageReference Include="LagoVista.XPlat">
-      <Version>1.2.214-alpha1736</Version>
+      <Version>1.2.215-alpha1838</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile">
       <Version>0.17.1</Version>

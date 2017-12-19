@@ -6,6 +6,7 @@
 	<Application.Resources>
         <ResourceDictionary>
             <cvts:VisibilityConverter x:Key="VisibilityConverter" />
+            <cvts:DatePrinterConverter x:Key="DatePrinterConverter" />
             <Color x:Key="NuvIoTContrast">#FFD48D17</Color>
             <Color x:Key="PageBackground">#2E533D</Color>
             <Color x:Key="NuvIoTDark">#1976D2</Color>
