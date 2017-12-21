@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LagoVista.PlatformManager.Core", "src\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj", "{B8746AB5-0C2B-45DB-8483-3276DD5F7083}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagoVista.PlatformManager.Core", "src\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj", "{B8746AB5-0C2B-45DB-8483-3276DD5F7083}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LagoVista.PlatformManager", "src\LagoVista.PlatformManager\LagoVista.PlatformManager.csproj", "{B6E22604-C84F-488E-86E5-0FE8B30AB6B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagoVista.PlatformManager", "src\LagoVista.PlatformManager\LagoVista.PlatformManager.csproj", "{B6E22604-C84F-488E-86E5-0FE8B30AB6B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagoVista.PlatformManager.iOS", "src\LagoVista.PlatformManager.iOS\LagoVista.PlatformManager.iOS.csproj", "{A1E56837-3DF4-406A-B5C9-608E9A853BCE}"
 EndProject
