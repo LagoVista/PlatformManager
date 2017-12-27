@@ -1,6 +1,7 @@
 ﻿using LagoVista.Client.Core.ViewModels;
 using LagoVista.Core.Commanding;
 using LagoVista.Core.Validation;
+using LagoVista.Core.ViewModels;
 using LagoVista.IoT.Deployment.Admin.Models;
 using System.Threading.Tasks;
 

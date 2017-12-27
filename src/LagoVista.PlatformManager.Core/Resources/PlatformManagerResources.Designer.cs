@@ -150,5 +150,86 @@ namespace LagoVista.PlatformManager.Core.Resources {
                 return ResourceManager.GetString("InstanceView_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Server Deploy Request.
+        /// </summary>
+        public static string ServerAction_SentDeploy {
+            get {
+                return ResourceManager.GetString("ServerAction_SentDeploy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Instance Pause Request.
+        /// </summary>
+        public static string ServerAction_SentPause {
+            get {
+                return ResourceManager.GetString("ServerAction_SentPause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Solution Reload Request.
+        /// </summary>
+        public static string ServerAction_SentReloadSolution {
+            get {
+                return ResourceManager.GetString("ServerAction_SentReloadSolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Server Remove Request.
+        /// </summary>
+        public static string ServerAction_SentRemove {
+            get {
+                return ResourceManager.GetString("ServerAction_SentRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Server Restart Request.
+        /// </summary>
+        public static string ServerAction_SentReset {
+            get {
+                return ResourceManager.GetString("ServerAction_SentReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Container Restart Request.
+        /// </summary>
+        public static string ServerAction_SentResetContainer {
+            get {
+                return ResourceManager.GetString("ServerAction_SentResetContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Instance Start Request.
+        /// </summary>
+        public static string ServerAction_SentStart {
+            get {
+                return ResourceManager.GetString("ServerAction_SentStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Instance Stop Request.
+        /// </summary>
+        public static string ServerAction_SentStop {
+            get {
+                return ResourceManager.GetString("ServerAction_SentStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Runtime Update Request.
+        /// </summary>
+        public static string ServerAction_SentUpdateRuntime {
+            get {
+                return ResourceManager.GetString("ServerAction_SentUpdateRuntime", resourceCulture);
+            }
+        }
     }
 }

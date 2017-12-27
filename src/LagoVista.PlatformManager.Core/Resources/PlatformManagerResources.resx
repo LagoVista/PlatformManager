@@ -147,4 +147,31 @@
   <data name="InstanceView_Title" xml:space="preserve">
     <value>Instance Details</value>
   </data>
+  <data name="ServerAction_SentDeploy" xml:space="preserve">
+    <value>Queued Server Deploy Request</value>
+  </data>
+  <data name="ServerAction_SentPause" xml:space="preserve">
+    <value>Queued Instance Pause Request</value>
+  </data>
+  <data name="ServerAction_SentReloadSolution" xml:space="preserve">
+    <value>Queued Solution Reload Request</value>
+  </data>
+  <data name="ServerAction_SentRemove" xml:space="preserve">
+    <value>Queued Server Remove Request</value>
+  </data>
+  <data name="ServerAction_SentReset" xml:space="preserve">
+    <value>Queued Server Restart Request</value>
+  </data>
+  <data name="ServerAction_SentResetContainer" xml:space="preserve">
+    <value>Queued Container Restart Request</value>
+  </data>
+  <data name="ServerAction_SentStart" xml:space="preserve">
+    <value>Queued Instance Start Request</value>
+  </data>
+  <data name="ServerAction_SentStop" xml:space="preserve">
+    <value>Queued Instance Stop Request</value>
+  </data>
+  <data name="ServerAction_SentUpdateRuntime" xml:space="preserve">
+    <value>Queued Runtime Update Request</value>
+  </data>
 </root>

@@ -39,5 +39,15 @@ namespace LagoVista.PlatformManager
         public string ClientType => "mobileapp";
 
         public VersionInfo Version { get; set; }
+
+        public string CompanyName => "Software Logistics, LLC";
+
+        public string CompanySiteLink => "https://support.nuviot.com/help.html#/information/company";
+
+        public string AppDescription => "IoT Platform Manager is a free utility provided by Software Logistics, LLC to help monitor and manage IoT Server applications built with IoT App Studio.";
+
+        public string TermsAndConditionsLink => "https://app.termly.io/document/terms-of-use-for-saas/90eaf71a-610a-435e-95b1-c94b808f8aca";
+
+        public string PrivacyStatementLink => "https://app.termly.io/document/privacy-policy-for-website/f0b67cde-2a08-4fe8-a35e-5e4571545d00";
     }
 }
