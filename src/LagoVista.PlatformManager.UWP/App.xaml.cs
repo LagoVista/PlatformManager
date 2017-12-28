@@ -75,9 +75,8 @@ namespace LagoVista.PlatformManager.UWP
 
                 SLWIOC.Register<IWebSocket, WebSocket>();
 
-                LagoVista.Core.UWP.Startup.Init(this, rootFrame.Dispatcher, MOBILE_CENTER_KEY);
+                LagoVista.Core.UWP.Startup.Init(this, rootFrame.Dispatcher, MOBILE_CENTER_KEY);               
 
-                SLWIOC.RegisterSingleton<IDeviceInfo>(new DeviceInfo());
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) { }
 
                 Window.Current.Content = rootFrame;

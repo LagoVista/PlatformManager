@@ -147,6 +147,33 @@
   <data name="InstanceView_Title" xml:space="preserve">
     <value>Instance Details</value>
   </data>
+  <data name="ServerActionLink_Deploy" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="ServerActionLink_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="ServerActionLink_ReloadSolution" xml:space="preserve">
+    <value>Reload Solution</value>
+  </data>
+  <data name="ServerActionLink_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ServerActionLink_Reset" xml:space="preserve">
+    <value>Rest Host</value>
+  </data>
+  <data name="ServerActionLink_ResetContainer" xml:space="preserve">
+    <value>Reset Runtime</value>
+  </data>
+  <data name="ServerActionLink_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="ServerActionLink_Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="ServerActionLink_UpdateRuntime" xml:space="preserve">
+    <value>Update Runtime</value>
+  </data>
   <data name="ServerAction_SentDeploy" xml:space="preserve">
     <value>Queued Server Deploy Request</value>
   </data>

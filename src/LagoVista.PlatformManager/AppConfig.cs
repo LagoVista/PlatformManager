@@ -29,9 +29,9 @@ namespace LagoVista.PlatformManager
 
         public string AppName => "IoT Platform Manager";
 
-        public string AppLogo => "";
+        public string AppLogo => "appicon.png";
 
-        public string CompanyLogo => "";
+        public string CompanyLogo => "slsys.png";
 
         public bool EmitTestingCode => true;
 

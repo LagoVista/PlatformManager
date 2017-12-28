@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using LagoVista.IoT.Deployment.Admin.Models;
+using LagoVista.Client.Core.ViewModels.Other;
 
 namespace LagoVista.PlatformManager.Core.ViewModels
 {
@@ -33,6 +34,12 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                     Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<InviteUserViewModel>(this)),
                     Name = ClientResources.MainMenu_InviteUser,
                     FontIconKey = "fa-user"
+                },
+                new MenuItem()
+                {
+                    Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<AboutViewModel>(this)),
+                    Name = "About",
+                    FontIconKey = "fa-info"
                 },
                 new MenuItem()
                 {

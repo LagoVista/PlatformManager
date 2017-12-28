@@ -57,7 +57,9 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             PerformNetworkOperation(async () =>
             {
                 var resourceId = resourceType == ResourceType.Host ? Instance.Host.Id : Instance.Id;
-                var uri = $"/api/deployment/${resourceType.ToString().ToLower()}/{resourceId}/{action}";
+                var uri = $"/api/deployment/{resourceType.ToString().ToLower()}/{resourceId}/{action}";
+                Debug.WriteLine("Request Id: " + uri);
+
                 var response = await RestClient.GetAsync(uri);
                 if (response.Success)
                 {
@@ -119,6 +121,16 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             StopApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "stop", Resources.PlatformManagerResources.ServerAction_SentStop));
             ReloadSolution = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
             UpdateRuntime = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
+
+            CanRemoveServer = true;
+            CanResetartServer = true;
+            CanRestartContainer = true;
+            CanUpdateRuntime = true;
+            CanDeployHost = true;
+            CanStopApplication = true;
+            CanPauseApplication = true;
+            CanStartApplication = true;
+            CanReloadSolution = true;
         }
 
         public RelayCommand DeployHostCommand { get; private set; }
@@ -135,5 +147,70 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         public RelayCommand ShowInstanceTelemetry { get; private set; }
 
         public ObservableCollection<Notification> MessagesFromServer { get; private set; } = new ObservableCollection<Notification>();
+
+        private bool _canRemoveServer;
+        public bool CanRemoveServer
+        {
+            get { return _canRemoveServer; }
+            set { Set(ref _canRemoveServer, value); }
+        }
+
+        private bool _canRestartServer;
+        public bool CanResetartServer
+        {
+            get { return _canRestartServer; }
+            set { Set(ref _canRestartServer, value); }
+        }
+
+        private bool _canRestartContainer;
+        public bool CanRestartContainer
+        {
+            get { return _canRestartContainer; }
+            set { Set(ref _canRestartContainer, value); }
+        }
+
+        private bool _canUpdateRuntime;
+        public bool CanUpdateRuntime
+        {
+            get { return _canUpdateRuntime; }
+            set { Set(ref _canUpdateRuntime, value); }
+        }
+
+        private bool _canDeployHost;
+        public bool CanDeployHost
+        {
+            get { return _canDeployHost; }
+            set { Set(ref _canDeployHost, value); }
+        }
+
+        private bool _canStopApplication;
+        public bool CanStopApplication
+        {
+            get { return _canStopApplication; }
+            set { Set(ref _canStopApplication, value); }
+        }
+
+        private bool _canPauseApplication;
+        public bool CanPauseApplication
+        {
+            get { return _canPauseApplication; }
+            set { Set(ref _canPauseApplication, value); }
+        }
+
+        private bool _canStartApplication;
+        public bool CanStartApplication
+        {
+            get { return _canStartApplication; }
+            set { Set(ref _canStartApplication, value); }
+        }
+
+        private bool _canReloadSolution;
+        public bool CanReloadSolution
+        {
+            get { return _canReloadSolution; }
+            set { Set(ref _canReloadSolution, value); }
+        }
+
+
     }
 }

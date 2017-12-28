@@ -5,13 +5,16 @@
 using LagoVista.Client.Core;
 using LagoVista.Client.Core.Models;
 using LagoVista.Client.Core.ViewModels;
+using LagoVista.Client.Core.ViewModels.Other;
 using LagoVista.Core.Interfaces;
 using LagoVista.Core.IOC;
+using LagoVista.Core.Models;
 using LagoVista.Core.PlatformSupport;
 using LagoVista.Core.ViewModels;
 using LagoVista.PlatformManager.Core.ViewModels;
 using LagoVista.XPlat.Core.Services;
 using LagoVista.XPlat.Core.Views;
+using LagoVista.XPlat.Core.Views.Other;
 using System;
 
 using Xamarin.Forms;
@@ -21,6 +24,7 @@ namespace LagoVista.PlatformManager
     public partial class App : Application
     {
         static App _instance;
+        AppConfig _appConfig;
 
 
         public App()
@@ -65,10 +69,14 @@ namespace LagoVista.PlatformManager
              * https://www.youtube.com/watch?v=7-FbfkUD78w
              */
 
+            DeviceInfo.Register();
+
             var clientAppInfo = new ClientAppInfo();
 
+            _appConfig = new AppConfig();
+
             SLWIOC.RegisterSingleton<IClientAppInfo>(clientAppInfo);
-            SLWIOC.RegisterSingleton<IAppConfig>(new AppConfig());
+            SLWIOC.RegisterSingleton<IAppConfig>(_appConfig);
 
             var navigation = new ViewModelNavigation(this);
             LagoVista.XPlat.Core.Startup.Init(this, navigation);
@@ -88,6 +96,13 @@ namespace LagoVista.PlatformManager
 
             SLWIOC.RegisterSingleton<IViewModelNavigation>(navigation);
         }
+
+
+        public void SetVersionInfo(VersionInfo versionInfo)
+        {
+            _appConfig.Version = versionInfo;
+        }
+
 
         public static App Instance { get { return _instance; } }
 

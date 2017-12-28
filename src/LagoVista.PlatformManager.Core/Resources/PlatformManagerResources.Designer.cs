@@ -231,5 +231,86 @@ namespace LagoVista.PlatformManager.Core.Resources {
                 return ResourceManager.GetString("ServerAction_SentUpdateRuntime", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deploy.
+        /// </summary>
+        public static string ServerActionLink_Deploy {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Deploy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pause.
+        /// </summary>
+        public static string ServerActionLink_Pause {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reload Solution.
+        /// </summary>
+        public static string ServerActionLink_ReloadSolution {
+            get {
+                return ResourceManager.GetString("ServerActionLink_ReloadSolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string ServerActionLink_Remove {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rest Host.
+        /// </summary>
+        public static string ServerActionLink_Reset {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Runtime.
+        /// </summary>
+        public static string ServerActionLink_ResetContainer {
+            get {
+                return ResourceManager.GetString("ServerActionLink_ResetContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        public static string ServerActionLink_Start {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop.
+        /// </summary>
+        public static string ServerActionLink_Stop {
+            get {
+                return ResourceManager.GetString("ServerActionLink_Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Runtime.
+        /// </summary>
+        public static string ServerActionLink_UpdateRuntime {
+            get {
+                return ResourceManager.GetString("ServerActionLink_UpdateRuntime", resourceCulture);
+            }
+        }
     }
 }
