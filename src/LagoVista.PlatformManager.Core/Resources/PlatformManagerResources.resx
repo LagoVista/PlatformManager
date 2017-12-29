@@ -147,6 +147,27 @@
   <data name="InstanceView_Title" xml:space="preserve">
     <value>Instance Details</value>
   </data>
+  <data name="MonitorInstance_Busy" xml:space="preserve">
+    <value>Busy...</value>
+  </data>
+  <data name="MonitorInstance_InstanceActions" xml:space="preserve">
+    <value>Instance Actions</value>
+  </data>
+  <data name="MonitorInstance_InstanceInformation" xml:space="preserve">
+    <value>Instance Information</value>
+  </data>
+  <data name="MonitorInstance_InstanceName" xml:space="preserve">
+    <value>Instance Name</value>
+  </data>
+  <data name="MonitorInstance_InstanceStatus" xml:space="preserve">
+    <value>Instance Status</value>
+  </data>
+  <data name="MonitorInstance_ServerStatus" xml:space="preserve">
+    <value>Server Status</value>
+  </data>
+  <data name="MonitorInstance_Title" xml:space="preserve">
+    <value>Monitor Instance</value>
+  </data>
   <data name="ServerActionLink_Deploy" xml:space="preserve">
     <value>Deploy</value>
   </data>
@@ -160,7 +181,7 @@
     <value>Remove</value>
   </data>
   <data name="ServerActionLink_Reset" xml:space="preserve">
-    <value>Rest Host</value>
+    <value>Reset Server</value>
   </data>
   <data name="ServerActionLink_ResetContainer" xml:space="preserve">
     <value>Reset Runtime</value>

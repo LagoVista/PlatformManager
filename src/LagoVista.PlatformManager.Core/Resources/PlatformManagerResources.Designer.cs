@@ -152,6 +152,69 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Busy....
+        /// </summary>
+        public static string MonitorInstance_Busy {
+            get {
+                return ResourceManager.GetString("MonitorInstance_Busy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instance Actions.
+        /// </summary>
+        public static string MonitorInstance_InstanceActions {
+            get {
+                return ResourceManager.GetString("MonitorInstance_InstanceActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instance Information.
+        /// </summary>
+        public static string MonitorInstance_InstanceInformation {
+            get {
+                return ResourceManager.GetString("MonitorInstance_InstanceInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instance Name.
+        /// </summary>
+        public static string MonitorInstance_InstanceName {
+            get {
+                return ResourceManager.GetString("MonitorInstance_InstanceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instance Status.
+        /// </summary>
+        public static string MonitorInstance_InstanceStatus {
+            get {
+                return ResourceManager.GetString("MonitorInstance_InstanceStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Server Status.
+        /// </summary>
+        public static string MonitorInstance_ServerStatus {
+            get {
+                return ResourceManager.GetString("MonitorInstance_ServerStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monitor Instance.
+        /// </summary>
+        public static string MonitorInstance_Title {
+            get {
+                return ResourceManager.GetString("MonitorInstance_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Queued Server Deploy Request.
         /// </summary>
         public static string ServerAction_SentDeploy {
@@ -269,7 +332,7 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rest Host.
+        ///   Looks up a localized string similar to Reset Server.
         /// </summary>
         public static string ServerActionLink_Reset {
             get {

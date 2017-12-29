@@ -8,11 +8,18 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using LagoVista.Core;
+using Newtonsoft.Json;
+using LagoVista.IoT.Runtime.Core.Models.Messaging;
+using LagoVista.Client.Core.Net;
+using LagoVista.Core.Validation;
+using LagoVista.Core.IOC;
+using LagoVista.Core.Models;
 
 namespace LagoVista.PlatformManager.Core.ViewModels
 {
     public class MonitorInstanceViewModel : MonitoringViewModelBase
     {
+        IWebSocket _hostWebSocket;
 
         enum ResourceType
         {
@@ -29,15 +36,55 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                 if (response.Successful)
                 {
                     Instance = response.Result.Model;
+
+                    var hostUri = $"/api/deployment/host/{Instance.PrimaryHost.Id}";
+                    var hostResponse = await RestClient.GetAsync<DetailResponse<DeploymentHost>>(hostUri);
+                    if (hostResponse.Successful)
+                    {
+                        Host = hostResponse.Result.Model;
+                        var hostChannelUri = $"/api/wsuri/host/{Instance.PrimaryHost.Id}/normal";
+
+                        Debug.WriteLine("Asing for end URI: " + hostChannelUri);
+                        var wsResult = await RestClient.GetAsync<InvokeResult<string>>(hostChannelUri);
+                        if (wsResult.Successful)
+                        {
+                            var url = wsResult.Result.Result;
+                            Debug.WriteLine(url);
+                            var wsUri = new Uri(url);
+                            _hostWebSocket = SLWIOC.Create<IWebSocket>();
+                            _hostWebSocket.MessageReceived += _hostWebSocket_MessageReceived; ;
+                            var wsOpenResult = await _hostWebSocket.OpenAsync(wsUri);
+                            if (wsOpenResult.Successful)
+                            {
+                                Debug.WriteLine("OPENED CHANNEL");
+                            }
+                        }
+
+                        EnableActions();
+                    }
+                    else
+                    {
+                        await ShowServerErrorMessageAsync(hostResponse.ToInvokeResult());
+                        CloseScreen();
+                    }
                 }
                 else
                 {
                     await ShowServerErrorMessageAsync(response.ToInvokeResult());
                     CloseScreen();
                 }
+
             });
 
             return base.InitAsync();
+        }
+
+
+        DeploymentHost _host;
+        public DeploymentHost Host
+        {
+            get { return _host; }
+            set { Set(ref _host, value); }
         }
 
         DeploymentInstance _instance;
@@ -63,28 +110,115 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                 var response = await RestClient.GetAsync(uri);
                 if (response.Success)
                 {
-                    MessagesFromServer.Insert(0, new Notification()
-                    {
-                        Text = message,
-                        DateStamp = DateTime.UtcNow.ToJSONString()
-                    });
-                    if (MessagesFromServer.Count > 100) MessagesFromServer.RemoveAt(100);
+                    AddMessage(DateTime.UtcNow, message);
                 }
                 else
                 {
                     await ShowServerErrorMessageAsync(response.ToInvokeResult());
-                    MessagesFromServer.Insert(0, new Notification()
-                    {
-                        Text = response.ErrorMessage,
-                        DateStamp = DateTime.UtcNow.ToJSONString()
-                    });
+                    AddMessage(DateTime.UtcNow, response.ErrorMessage);
+                }
+            });
+        }
+
+        private void AddMessage(Client.Core.Models.Notification notification)
+        {
+            if (!String.IsNullOrEmpty(notification.Text))
+            {
+                DispatcherServices.Invoke(() =>
+                {
+                    MessagesFromServer.Insert(0, notification);
                     if (MessagesFromServer.Count > 100) MessagesFromServer.RemoveAt(100);
+                });
+            }
+        }
+
+        private void AddMessage(DateTime dateStamp, string message)
+        {
+            var notification = new Client.Core.Models.Notification()
+            {
+                Text = message,
+                DateStamp = dateStamp.ToJSONString()
+            };
+
+            AddMessage(notification);
+        }
+
+        private void EnableActions()
+        {
+            DispatcherServices.Invoke(() =>
+            {
+                CanDeployHost = false;
+                CanPauseApplication = false;
+                CanReloadSolution = false;
+                CanRemoveServer = false;
+                CanRestartServer = false;
+                CanRestartContainer = false;
+                CanStartApplication = false;
+                CanStopApplication = false;
+                CanUpdateRuntime = false;
+
+
+                ShowIsBusy = false;
+
+                switch (Host.Status.Value)
+                {
+                    case HostStatus.Offline:
+                        CanDeployHost = true;
+                        break;
+                    case HostStatus.FailedDeployment:
+                    case HostStatus.HostHealthCheckFailed:
+                        CanRestartServer = true;
+                        CanRemoveServer = true;
+                        CanUpdateRuntime = true;
+                        break;
+                    case HostStatus.Running:
+                        CanRestartServer = true;
+                        CanRemoveServer = true;
+                        CanUpdateRuntime = true;
+                        switch (Instance.Status.Value)
+                        {
+                            case DeploymentInstanceStates.FatalError:
+                            case DeploymentInstanceStates.FailedToInitialize:
+                                CanRestartContainer = true;
+                                CanReloadSolution = true;
+                                break;
+                            case DeploymentInstanceStates.Offline:
+                                CanRestartContainer = true;
+                                CanReloadSolution = true;
+                                CanStartApplication = true;
+                                CanReloadSolution = true;
+                                break;
+                            case DeploymentInstanceStates.Paused:
+                                CanRestartContainer = true;
+                                CanReloadSolution = true;
+                                CanStopApplication = true;
+                                CanStartApplication = true;
+                                break;
+                            case DeploymentInstanceStates.Stopped:
+                                CanRestartContainer = true;
+                                CanReloadSolution = true;
+                                CanStartApplication = true;
+                                break;
+                            case DeploymentInstanceStates.Running:
+                                CanRestartContainer = true;
+                                CanReloadSolution = true;
+                                CanPauseApplication = true;
+                                CanStopApplication = true;
+                                break;
+                            default:
+                                ShowIsBusy = true;
+                                break;
+                        }
+                        break;
+                    default:
+                        ShowIsBusy = true;
+                        break;
 
                 }
             });
         }
 
-        public override void HandleMessage(Notification notification)
+        public override void HandleMessage(Client.Core.Models.Notification notification)
         {
             if (!String.IsNullOrEmpty(notification.PayloadType))
             {
@@ -92,21 +226,59 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                 Debug.WriteLine(notification.PayloadType);
                 Debug.WriteLine(notification.Payload);
                 Debug.WriteLine("----");
+
+                switch (notification.PayloadType)
+                {
+                    case "StateChangeNotification":
+                        var stateChange = JsonConvert.DeserializeObject<StateChangeNotification>(notification.Payload);
+                        var titleCasedId = $"{stateChange.NewState.Id.Substring(0, 1).ToUpper()}{stateChange.NewState.Id.Substring(1)}";
+
+                        Instance.Status = new EntityHeader<DeploymentInstanceStates>()
+                        {
+                            Id = stateChange.NewState.Id,
+                            Text = stateChange.NewState.Text
+                        };
+
+                        RaisePropertyChanged(nameof(MonitorInstanceViewModel.Instance));
+                        EnableActions();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            AddMessage(notification);
+        }
+
+
+        private void _hostWebSocket_MessageReceived(object sender, string json)
+        {
+            var notification = JsonConvert.DeserializeObject<LagoVista.Client.Core.Models.Notification>(json);
+
+            if (!String.IsNullOrEmpty(notification.PayloadType))
+            {
+                switch (notification.PayloadType)
+                {
+                    case "StateChangeNotification":
+                        var stateChange = JsonConvert.DeserializeObject<StateChangeNotification>(notification.Payload);
+                        var titleCasedId = $"{stateChange.NewState.Id.Substring(0, 1).ToUpper()}{stateChange.NewState.Id.Substring(1)}";
+
+                        Host.Status = new EntityHeader<HostStatus>()
+                        {
+                            Id = stateChange.NewState.Id,
+                            Text = stateChange.NewState.Text
+                        };
+
+                        RaisePropertyChanged(nameof(MonitorInstanceViewModel.Host));
+                        EnableActions();
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {
-                if (!String.IsNullOrEmpty(notification.Text))
-                {
-                    DispatcherServices.Invoke(() =>
-                    {
-                        MessagesFromServer.Insert(0, notification);
-                        if (MessagesFromServer.Count > 100)
-                        {
-                            MessagesFromServer.RemoveAt(100);
-                        }
-                    });
-                }
-                Debug.WriteLine(notification.Text);
+                AddMessage(notification);
             }
         }
 
@@ -122,15 +294,15 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             ReloadSolution = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
             UpdateRuntime = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
 
-            CanRemoveServer = true;
-            CanResetartServer = true;
-            CanRestartContainer = true;
-            CanUpdateRuntime = true;
-            CanDeployHost = true;
-            CanStopApplication = true;
-            CanPauseApplication = true;
-            CanStartApplication = true;
-            CanReloadSolution = true;
+            CanRemoveServer = false;
+            CanRestartServer = false;
+            CanRestartContainer = false;
+            CanUpdateRuntime = false;
+            CanDeployHost = false;
+            CanStopApplication = false;
+            CanPauseApplication = false;
+            CanStartApplication = false;
+            CanReloadSolution = false;
         }
 
         public RelayCommand DeployHostCommand { get; private set; }
@@ -146,7 +318,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         public RelayCommand ShowHostTelemetry { get; private set; }
         public RelayCommand ShowInstanceTelemetry { get; private set; }
 
-        public ObservableCollection<Notification> MessagesFromServer { get; private set; } = new ObservableCollection<Notification>();
+        public ObservableCollection<Client.Core.Models.Notification> MessagesFromServer { get; private set; } = new ObservableCollection<Client.Core.Models.Notification>();
 
         private bool _canRemoveServer;
         public bool CanRemoveServer
@@ -156,7 +328,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         }
 
         private bool _canRestartServer;
-        public bool CanResetartServer
+        public bool CanRestartServer
         {
             get { return _canRestartServer; }
             set { Set(ref _canRestartServer, value); }
@@ -211,6 +383,11 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             set { Set(ref _canReloadSolution, value); }
         }
 
-
+        private bool _showIsBusy;
+        public bool ShowIsBusy
+        {
+            get { return _showIsBusy; }
+            set { Set(ref _showIsBusy, value);  }
+        }
     }
 }
