@@ -5,7 +5,7 @@
     <DebugType>Full</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.225-alpha1746" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.225-alpha1811" />
     <PackageReference Include="LagoVista.Core" Version="1.2.224-alpha1826" />
     <PackageReference Include="LagoVista.Core.Authentication" Version="1.2.224-alpha1826" />
     <PackageReference Include="LagoVista.Core.Networking" Version="1.2.224-alpha1826" />
@@ -15,8 +15,9 @@
     <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="1.2.224-alpha1826" />
     <PackageReference Include="LagoVista.IoT.Logging" Version="1.2.224-alpha1826" />
     <PackageReference Include="LagoVista.IoT.Pipeline.Models" Version="1.2.224-alpha1826" />
+    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="1.2.224-alpha1826" />
     <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.224-alpha1826" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.225-alpha1746" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.225-alpha1811" />
     <PackageReference Include="Microsoft.Azure.Mobile" Version="0.17.1" />
     <PackageReference Include="Microsoft.Azure.Mobile.Analytics" Version="0.17.1" />
     <PackageReference Include="Microsoft.Azure.Mobile.Crashes" Version="0.17.1" />
