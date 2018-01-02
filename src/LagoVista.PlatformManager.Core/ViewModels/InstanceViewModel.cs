@@ -55,7 +55,14 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                 var result = await RestClient.GetAsync<InvokeResult<InstanceRuntimeDetails>>($"/api/deployment/instance/{LaunchArgs.ChildId}/runtime");
                 if(result.Successful)
                 {
-                    RuntimeDetails = result.Result.Result;
+                    if (result.Result.Successful)
+                    {
+                        RuntimeDetails = result.Result.Result;
+                    }
+                    else
+                    {
+                        return result.Result.ToInvokeResult();
+                    }
                 }
                 return result.ToInvokeResult();
             });

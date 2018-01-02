@@ -14,6 +14,7 @@ using LagoVista.Client.Core.Net;
 using LagoVista.Core.Validation;
 using LagoVista.Core.IOC;
 using LagoVista.Core.Models;
+using LagoVista.Core.ViewModels;
 
 namespace LagoVista.PlatformManager.Core.ViewModels
 {
@@ -293,6 +294,8 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             StopApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "stop", Resources.PlatformManagerResources.ServerAction_SentStop));
             ReloadSolution = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
             UpdateRuntime = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
+            ShowInstanceTelemetryCommand = new RelayCommand(ShowInstanceTelemetry);
+            ShowHostTelemetryCommand = new RelayCommand(ShowHostTelemetry);
 
             CanRemoveServer = false;
             CanRestartServer = false;
@@ -305,6 +308,35 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             CanReloadSolution = false;
         }
 
+        public async void ShowInstanceTelemetry()
+        {
+            var launchArgs = new ViewModelLaunchArgs()
+            {
+                ViewModelType = typeof(TelemetryViewModel),
+                ChildId = Instance.Id,               
+            };
+
+            launchArgs.Parameters.Add(TelemetryViewModel.VIEW_TYPE, TelemetryViewModel.VIEW_TYPE_INSTANCE);
+            launchArgs.Parameters.Add(TelemetryViewModel.VIEW_NAME, Instance.Name);
+
+            await ViewModelNavigation.NavigateAsync(launchArgs);
+        }
+
+        public async void ShowHostTelemetry()
+        {
+            var launchArgs = new ViewModelLaunchArgs()
+            {
+                ViewModelType = typeof(TelemetryViewModel),
+                ChildId = Instance.Id,
+            };
+
+            launchArgs.Parameters.Add(TelemetryViewModel.VIEW_TYPE, TelemetryViewModel.VIEW_TYPE_HOST);
+            launchArgs.Parameters.Add(TelemetryViewModel.VIEW_NAME, Instance.Name);
+
+            await ViewModelNavigation.NavigateAsync(launchArgs);
+        }
+
+
         public RelayCommand DeployHostCommand { get; private set; }
         public RelayCommand RemoveServerCommand { get; private set; }
         public RelayCommand RestartContainer { get; private set; }
@@ -315,8 +347,8 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         public RelayCommand ReloadSolution { get; private set; }
         public RelayCommand UpdateRuntime { get; private set; }
 
-        public RelayCommand ShowHostTelemetry { get; private set; }
-        public RelayCommand ShowInstanceTelemetry { get; private set; }
+        public RelayCommand ShowHostTelemetryCommand { get; private set; }
+        public RelayCommand ShowInstanceTelemetryCommand { get; private set; }
 
         public ObservableCollection<Client.Core.Models.Notification> MessagesFromServer { get; private set; } = new ObservableCollection<Client.Core.Models.Notification>();
 

@@ -161,6 +161,15 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Host Telemetry.
+        /// </summary>
+        public static string MonitorInstance_HostTelemetry {
+            get {
+                return ResourceManager.GetString("MonitorInstance_HostTelemetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Instance Actions.
         /// </summary>
         public static string MonitorInstance_InstanceActions {
@@ -188,20 +197,11 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Instance Status.
+        ///   Looks up a localized string similar to Instance Telemetry.
         /// </summary>
-        public static string MonitorInstance_InstanceStatus {
+        public static string MonitorInstance_InstanceTelemetry {
             get {
-                return ResourceManager.GetString("MonitorInstance_InstanceStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Server Status.
-        /// </summary>
-        public static string MonitorInstance_ServerStatus {
-            get {
-                return ResourceManager.GetString("MonitorInstance_ServerStatus", resourceCulture);
+                return ResourceManager.GetString("MonitorInstance_InstanceTelemetry", resourceCulture);
             }
         }
         

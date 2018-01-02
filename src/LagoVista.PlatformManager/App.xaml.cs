@@ -90,7 +90,7 @@ namespace LagoVista.PlatformManager
             navigation.Add<ListenerViewModel, Views.ListenerView>();
             navigation.Add<PipelineViewModel, Views.PipelineView>();
             navigation.Add<PlannerViewModel, Views.PlannerView>();
-            navigation.Add<TelemetryViewModel, Views.TelemetryViewxaml>();
+            navigation.Add<TelemetryViewModel, Views.TelemetryView>();
 
             navigation.Start<SplashViewModel>();
 

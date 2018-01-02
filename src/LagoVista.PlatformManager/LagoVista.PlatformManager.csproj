@@ -28,4 +28,9 @@
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\TelemetryView.xaml.cs">
+      <DependentUpon>TelemetryView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

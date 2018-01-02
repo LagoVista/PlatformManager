@@ -150,6 +150,9 @@
   <data name="MonitorInstance_Busy" xml:space="preserve">
     <value>Busy...</value>
   </data>
+  <data name="MonitorInstance_HostTelemetry" xml:space="preserve">
+    <value>Host Telemetry</value>
+  </data>
   <data name="MonitorInstance_InstanceActions" xml:space="preserve">
     <value>Instance Actions</value>
   </data>
@@ -159,11 +162,8 @@
   <data name="MonitorInstance_InstanceName" xml:space="preserve">
     <value>Instance Name</value>
   </data>
-  <data name="MonitorInstance_InstanceStatus" xml:space="preserve">
-    <value>Instance Status</value>
-  </data>
-  <data name="MonitorInstance_ServerStatus" xml:space="preserve">
-    <value>Server Status</value>
+  <data name="MonitorInstance_InstanceTelemetry" xml:space="preserve">
+    <value>Instance Telemetry</value>
   </data>
   <data name="MonitorInstance_Title" xml:space="preserve">
     <value>Monitor Instance</value>

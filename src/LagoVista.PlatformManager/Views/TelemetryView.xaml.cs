@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace LagoVista.PlatformManager.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TelemetryViewxaml : LagoVistaContentPage
+	public partial class TelemetryView : LagoVistaContentPage
     {
-		public TelemetryViewxaml ()
+		public TelemetryView ()
 		{
 			InitializeComponent ();
 		}
