@@ -24,7 +24,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -189,6 +189,9 @@
     </Reference>
     <Reference Include="LagoVista.IoT.Pipeline.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.IoT.Pipeline.Models.1.2.224-alpha1826\lib\netstandard1.2\LagoVista.IoT.Pipeline.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="LagoVista.IoT.Runtime.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LagoVista.IoT.Runtime.Core.1.2.224-alpha1826\lib\netstandard1.3\LagoVista.IoT.Runtime.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.UserAdmin.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.224-alpha1826\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
