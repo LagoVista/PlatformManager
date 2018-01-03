@@ -8,10 +8,10 @@
 #  APPCENTER_BRANCH dev, stage or master, used to identify environment to set URI and grab correct icons
 
 # Set to directory name within /src where native project lives
-iOSProjectName=LagoVista.DeviceManager.iOS
+iOSProjectName=LagoVista.PlatformManager.iOS
 
 # Set to directory name within /src where common Xamarin forms app lives
-appProjectName=LagoVista.DeviceManager
+appProjectName=LagoVista.PlatformManager
 
 # Version is pulled from a file in the root, it contains first two digits of full version, such as 1.0
 version=$(<$APPCENTER_SOURCE_DIRECTORY/version.txt)
