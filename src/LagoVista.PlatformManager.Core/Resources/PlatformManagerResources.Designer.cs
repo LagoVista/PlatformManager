@@ -152,6 +152,15 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You currently don&apos;t have any IoT Applications deployed, please visit our web site to build your first application..
+        /// </summary>
+        public static string MainView_NoPlatforms {
+            get {
+                return ResourceManager.GetString("MainView_NoPlatforms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Busy....
         /// </summary>
         public static string MonitorInstance_Busy {
