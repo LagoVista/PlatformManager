@@ -39,10 +39,11 @@ namespace LagoVista.PlatformManager.Droid
             versionInfo.Build = Convert.ToInt32(versionParts[2]);
             versionInfo.Revision = Convert.ToInt32(versionParts[3]);
 
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+
             var app = new App();
             app.SetVersionInfo(versionInfo);
-
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            
             LoadApplication(app);
         }
     }
