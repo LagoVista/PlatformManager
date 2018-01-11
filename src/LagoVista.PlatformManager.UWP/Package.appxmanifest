@@ -3,7 +3,7 @@
   <Identity Name="SoftwareLogisticsLLC.IoTPlatformManager-LocalDev" Publisher="CN=610EF21F-3A3C-4783-B4BF-B7C267BC0CA0" Version="1.1.1.0" />
   <mp:PhoneIdentity PhoneProductId="b4e6f064-e9c1-420f-b998-a310d422f648" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Platform Manager</DisplayName>
+    <DisplayName>IoT Platform Manager</DisplayName>
     <PublisherDisplayName>Software Logistics LLC</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
