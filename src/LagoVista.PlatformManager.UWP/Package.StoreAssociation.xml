@@ -360,7 +360,7 @@
   <ProductReservedInfo>
     <MainPackageIdentityName>SoftwareLogisticsLLC.IoTPlatformManager-LocalDev</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>IoT Platform Manager - Stage</ReservedName>
+      <ReservedName>IoT Platform Manager</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>

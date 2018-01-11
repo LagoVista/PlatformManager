@@ -20,6 +20,10 @@
     <PackageCertificateKeyFile>LagoVista.PlatformManager.UWP_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>7E33D83DD98B3A19D1167B8782D9B05C0F834B28</PackageCertificateThumbprint>
     <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>L:\PlatformMgr</AppxPackageDir>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
