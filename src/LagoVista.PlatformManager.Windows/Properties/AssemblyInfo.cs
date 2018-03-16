@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IoT Platform Manager")]
-[assembly: AssemblyDescription("Manage IoT Server Applications built with IoT App Studio")]
+[assembly: AssemblyTitle("LagoVista.PlatformManager.Windows")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Software Logistics, LLC")]
-[assembly: AssemblyProduct("NuvIoT")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("LagoVista.PlatformManager.Windows")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

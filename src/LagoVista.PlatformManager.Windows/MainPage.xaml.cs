@@ -1,7 +1,12 @@
 ﻿using System.Reflection;
 
-namespace LagoVista.PlatformManager.UWP
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+
+namespace LagoVista.PlatformManager.Windows
 {
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
     public sealed partial class MainPage
     {
         public MainPage()
@@ -22,7 +27,6 @@ namespace LagoVista.PlatformManager.UWP
             app.SetVersionInfo(versionInfo);
             LoadApplication(app);
 
-            var btn = new LagoVista.XPlat.Core.Button();
         }
     }
 }

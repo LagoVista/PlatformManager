@@ -1,2 +1,12 @@
-LagoVista.Core=1.2.181-alpha1716
 LagoVista.Client.Core=1.2.209-alpha1059
+LagoVista.Core.Authentication=1.2.224-alpha1826
+LagoVista.Core.Networking=1.2.224-alpha1826
+LagoVista.IoT.Deployment.Models=1.2.224-alpha1826
+LagoVista.IoT.DeviceAdmin.Models=1.2.224-alpha1826
+LagoVista.IoT.DeviceManagement.Models=1.2.224-alpha1826
+LagoVista.IoT.DeviceMessaging.Models=1.2.224-alpha1826
+LagoVista.IoT.Logging=1.2.224-alpha1826
+LagoVista.IoT.Pipeline.Models=1.2.224-alpha1826
+LagoVista.UserAdmin.Models=1.2.224-alpha1826
+LagoVista.Core=1.2.181-alpha1716
+LagoVista.XPlat=1.2.226-alpha1506

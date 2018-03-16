@@ -1,7 +1,6 @@
 ﻿using LagoVista.Client.Core.Net;
 using LagoVista.Core.IOC;
 using LagoVista.Core.PlatformSupport;
-using LagoVista.Core.UWP.Services;
 using LagoVista.XPlat.UWP.Network;
 using System;
 using System.Diagnostics;
@@ -11,16 +10,13 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace LagoVista.PlatformManager.UWP
+namespace LagoVista.PlatformManager.Windows
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
-        /* Note this is a dev key, if you really wanna copy, feel free and have fun! :) */
-        public const string MOBILE_CENTER_KEY = "33298eb8-4b6e-43fe-9130-b25d3e6fb2ac";
-
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -39,6 +35,8 @@ namespace LagoVista.PlatformManager.UWP
                 if (global::System.Diagnostics.Debugger.IsAttached) global::System.Diagnostics.Debugger.Break();
             };
         }
+
+        public string MOBILE_CENTER_KEY { get; private set; }
 
         protected override void OnActivated(IActivatedEventArgs args)
         {
@@ -61,6 +59,8 @@ namespace LagoVista.PlatformManager.UWP
             base.OnActivated(args);
         }
 
+
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
             var rootFrame = Window.Current.Content as Frame;
@@ -75,7 +75,7 @@ namespace LagoVista.PlatformManager.UWP
 
                 SLWIOC.Register<IWebSocket, WebSocket>();
 
-                LagoVista.Core.UWP.Startup.Init(this, rootFrame.Dispatcher, MOBILE_CENTER_KEY);               
+                LagoVista.Core.UWP.Startup.Init(this, rootFrame.Dispatcher, MOBILE_CENTER_KEY);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) { }
 
@@ -92,7 +92,6 @@ namespace LagoVista.PlatformManager.UWP
                 Window.Current.Activate();
             }
         }
-
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails
