@@ -161,40 +161,40 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="LagoVista.Client.Core, Version=1.2.1.1, Culture=neutral, PublicKeyToken=d788b1c9b90dabea, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.303-alpha1157\lib\netstandard1.3\LagoVista.Client.Core.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.Client.Core.1.2.662-alpha1232\lib\netstandard2.0\LagoVista.Client.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.Core, Version=0.8.0.0, Culture=neutral, PublicKeyToken=2698135e9954a85d, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.Core.Networking.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.Core.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.Core.Networking.2.1.656-beta1121\lib\netstandard1.2\LagoVista.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.Core.Authentication, Version=0.8.0.0, Culture=neutral, PublicKeyToken=dcf35d1740df1edc, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.Core.Authentication.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.Core.Authentication.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.Core.Networking, Version=0.8.0.0, Culture=neutral, PublicKeyToken=650a46bd96014ff6, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.Core.Networking.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.Core.Networking.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.Core.Networking.2.1.656-beta1121\lib\netstandard1.2\LagoVista.Core.Networking.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.Deployment.Models, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Deployment.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.Deployment.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.Deployment.Models.2.1.656-beta1121\lib\netstandard2.0\LagoVista.IoT.Deployment.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.DeviceAdmin.Models, Version=1.2.211.1131, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceAdmin.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.DeviceAdmin.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceAdmin.Models.2.1.656-beta1121\lib\netstandard1.2\LagoVista.IoT.DeviceAdmin.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.DeviceManagement.Models, Version=1.2.211.1114, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceManagement.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.DeviceManagement.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceManagement.Models.2.1.656-beta1121\lib\netstandard2.0\LagoVista.IoT.DeviceManagement.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.DeviceMessaging.Models, Version=1.2.1.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.DeviceMessaging.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.DeviceMessaging.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.DeviceMessaging.Models.2.1.656-beta1121\lib\netstandard1.2\LagoVista.IoT.DeviceMessaging.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Logging.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.Logging.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.Logging.2.1.656-beta1121\lib\netstandard1.2\LagoVista.IoT.Logging.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.Pipeline.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Pipeline.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.IoT.Pipeline.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.Pipeline.Models.2.1.656-beta1121\lib\netstandard2.0\LagoVista.IoT.Pipeline.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.IoT.Runtime.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.IoT.Runtime.Core.1.2.303-alpha1026\lib\netstandard1.3\LagoVista.IoT.Runtime.Core.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.IoT.Runtime.Core.2.1.656-beta1121\lib\netstandard2.0\LagoVista.IoT.Runtime.Core.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.UserAdmin.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LagoVista.UserAdmin.Models.1.2.303-alpha1026\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
+      <HintPath>..\..\packages\LagoVista.UserAdmin.Models.2.1.656-beta1121\lib\netstandard1.2\LagoVista.UserAdmin.Models.dll</HintPath>
     </Reference>
     <Reference Include="LagoVista.XPlat.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LagoVista.XPlat.1.2.303-alpha1157\lib\Xamarin.iOS10\LagoVista.XPlat.Core.dll</HintPath>
@@ -203,37 +203,37 @@
       <HintPath>..\..\packages\LagoVista.XPlat.1.2.303-alpha1157\lib\Xamarin.iOS10\LagoVista.XPlat.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Distribute, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Distribute.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Distribute.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Distribute.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Distribute.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Distribute.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Distribute.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Distribute.iOS.Bindings.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Distribute.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Distribute.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Push, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Push.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Push.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Push.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Push.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AppCenter.Push.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AppCenter.Push.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Push.iOS.Bindings.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.AppCenter.Push.1.13.2\lib\Xamarin.iOS10\Microsoft.AppCenter.Push.iOS.Bindings.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
