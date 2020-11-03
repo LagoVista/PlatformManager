@@ -10,6 +10,7 @@ using System.Text;
 using LagoVista.IoT.Deployment.Admin.Models;
 using LagoVista.Client.Core.ViewModels.Other;
 using System.Threading.Tasks;
+using LagoVista.PlatformManager.Core.Resources;
 
 namespace LagoVista.PlatformManager.Core.ViewModels
 {
@@ -30,6 +31,12 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                     Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<ChangePasswordViewModel>(this)),
                     Name = ClientResources.MainMenu_ChangePassword,
                     FontIconKey = "fa-key"
+                },
+                new MenuItem()
+                {
+                    Command = new RelayCommand(() => ViewModelNavigation.NavigateAsync<AllActiveInstancesViewModel>(this)),
+                    Name = PlatformManagerResources.MainMenu_AllInstances,
+                    FontIconKey = "fa-list"
                 },
                 new MenuItem()
                 {

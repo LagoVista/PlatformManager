@@ -3,28 +3,29 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
     <DebugType>Full</DebugType>
+    <UserSecretsId>b4a74ac5-a625-40ca-857b-af288c5407d5</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.303-alpha1157" />
-    <PackageReference Include="LagoVista.Core.Authentication" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.Core.Networking" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Logging" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Pipeline.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="Microsoft.AppCenter" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="1.13.2" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="LagoVista.Core" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.303-alpha1157" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.1245-alpha1122" />
+    <PackageReference Include="LagoVista.Core.Authentication" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.Core.Networking" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Logging" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Pipeline.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.UserAdmin.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="Microsoft.AppCenter" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.4.3" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="LagoVista.Core" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.1245-alpha1122" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LagoVista.PlatformManager.Core\LagoVista.PlatformManager.Core.csproj" />
@@ -33,5 +34,13 @@
     <Compile Update="Views\TelemetryView.xaml.cs">
       <DependentUpon>TelemetryView.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AllInstancesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\InstanceSSHView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

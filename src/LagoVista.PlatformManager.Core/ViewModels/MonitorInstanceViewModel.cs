@@ -44,8 +44,6 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                     {
                         Host = hostResponse.Result.Model;
                         var hostChannelUri = $"/api/wsuri/host/{Instance.PrimaryHost.Id}/normal";
-
-                        Debug.WriteLine("Asing for end URI: " + hostChannelUri);
                         var wsResult = await RestClient.GetAsync<InvokeResult<string>>(hostChannelUri);
                         if (wsResult.Successful)
                         {
@@ -157,8 +155,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                 CanStartApplication = false;
                 CanStopApplication = false;
                 CanUpdateRuntime = false;
-
-
+                CanSSHIntoHost = false;
                 ShowIsBusy = false;
 
                 switch (Host.Status.Value)
@@ -171,11 +168,13 @@ namespace LagoVista.PlatformManager.Core.ViewModels
                         CanRestartServer = true;
                         CanRemoveServer = true;
                         CanUpdateRuntime = true;
+                        CanSSHIntoHost = true;
                         break;
                     case HostStatus.Running:
                         CanRestartServer = true;
                         CanRemoveServer = true;
                         CanUpdateRuntime = true;
+                        CanSSHIntoHost = true;
                         switch (Instance.Status.Value)
                         {
                             case DeploymentInstanceStates.FatalError:
@@ -294,6 +293,8 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             StopApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "stop", Resources.PlatformManagerResources.ServerAction_SentStop));
             ReloadSolution = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
             UpdateRuntime = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
+
+            SSHIntoInstanceCommand = new RelayCommand(SSHIntoInstance);
             ShowInstanceTelemetryCommand = new RelayCommand(ShowInstanceTelemetry);
             ShowHostTelemetryCommand = new RelayCommand(ShowHostTelemetry);
 
@@ -302,6 +303,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             CanRestartContainer = false;
             CanUpdateRuntime = false;
             CanDeployHost = false;
+            CanSSHIntoHost = false;
             CanStopApplication = false;
             CanPauseApplication = false;
             CanStartApplication = false;
@@ -322,12 +324,25 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             await ViewModelNavigation.NavigateAsync(launchArgs);
         }
 
+        public async void SSHIntoInstance()
+        {
+            var launchArgs = new ViewModelLaunchArgs()
+            {
+                ViewModelType = typeof(InstanceSSHViewModel),
+                ChildId = Instance.Id,
+            };
+
+            launchArgs.Parameters.Add(InstanceSSHViewModel.HOST_IP_ADDRESS, Host.Ipv4Address);
+
+            await ViewModelNavigation.NavigateAsync(launchArgs);
+        }
+
         public async void ShowHostTelemetry()
         {
             var launchArgs = new ViewModelLaunchArgs()
             {
                 ViewModelType = typeof(TelemetryViewModel),
-                ChildId = Instance.Id,
+                ChildId = Host.Id,
             };
 
             launchArgs.Parameters.Add(TelemetryViewModel.VIEW_TYPE, TelemetryViewModel.VIEW_TYPE_HOST);
@@ -347,6 +362,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         public RelayCommand ReloadSolution { get; private set; }
         public RelayCommand UpdateRuntime { get; private set; }
 
+        public RelayCommand SSHIntoInstanceCommand { get; private set; }
         public RelayCommand ShowHostTelemetryCommand { get; private set; }
         public RelayCommand ShowInstanceTelemetryCommand { get; private set; }
 
@@ -413,6 +429,13 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         {
             get { return _canReloadSolution; }
             set { Set(ref _canReloadSolution, value); }
+        }
+
+        private bool _canSSHIntoHost = false;
+        public bool CanSSHIntoHost
+        {
+            get { return _canSSHIntoHost; }
+            set { Set(ref _canSSHIntoHost, value); }
         }
 
         private bool _showIsBusy;

@@ -147,6 +147,9 @@
   <data name="InstanceView_Title" xml:space="preserve">
     <value>Instance Details</value>
   </data>
+  <data name="MainMenu_AllInstances" xml:space="preserve">
+    <value>All Instances</value>
+  </data>
   <data name="MainView_NoPlatforms" xml:space="preserve">
     <value>You currently don't have any IoT Applications deployed, please visit our web site to build your first application.</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="ServerActionLink_ResetContainer" xml:space="preserve">
     <value>Reset Runtime</value>
+  </data>
+  <data name="ServerActionLink_SSH" xml:space="preserve">
+    <value>SSH Into Host</value>
   </data>
   <data name="ServerActionLink_Start" xml:space="preserve">
     <value>Start</value>

@@ -87,6 +87,10 @@
                         <pge:IconButton Command="{Binding StopApplication}" IconKey="fa-stop" TextColor="{StaticResource NuvIoTDark}" />
                         <pge:HyperLinkLabel NavigateCommand="{Binding StopApplication}" Text="{trs:Translate ServerActionLink_Stop}" />
                     </StackLayout>
+                    <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanSSHIntoHost}">
+                        <pge:IconButton Command="{Binding StopApplication}" IconKey="fa-terminal" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding SSHIntoInstanceCommand}" Text="{trs:Translate ServerActionLink_SSH}" />
+                    </StackLayout>
                 </StackLayout>
 
                 <StackLayout Grid.Row="1" Grid.Column="1">

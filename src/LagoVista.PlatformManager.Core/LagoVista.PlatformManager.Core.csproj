@@ -5,26 +5,28 @@
     <DebugType>Full</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LagoVista.Client.Core" Version="1.2.303-alpha1157" />
-    <PackageReference Include="LagoVista.Core" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.Core.Authentication" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.Core.Networking" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Logging" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Pipeline.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.UserAdmin.Models" Version="1.2.303-alpha1026" />
-    <PackageReference Include="LagoVista.XPlat" Version="1.2.303-alpha1157" />
-    <PackageReference Include="Microsoft.AppCenter" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="1.13.2" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="1.13.2" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="LagoVista.Client.Core" Version="1.2.1245-alpha1122" />
+    <PackageReference Include="LagoVista.Core" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.Core.Authentication" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.Core.Networking" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Deployment.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceAdmin.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceManagement.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.DeviceMessaging.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Logging" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Pipeline.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.IoT.Runtime.Core" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.UserAdmin.Models" Version="2.1.1264-beta0827" />
+    <PackageReference Include="LagoVista.XPlat" Version="1.2.1245-alpha1122" />
+    <PackageReference Include="Microsoft.AppCenter" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.4.3" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.4.3" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.15.0-preview" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="SSH.NET" Version="2020.0.0-beta1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\PlatformManagerResources.Designer.cs">

@@ -59,8 +59,11 @@ namespace LagoVista.PlatformManager.Core.ViewModels
 
         public void ShowStatusHistory()
         {
-            var statusHistoryUri = $"/api/deployment/{ViewType}/{Id}/statushistory";
-            LoadData(statusHistoryUri);
+            if (AuthManager.User.IsSystemAdmin)
+            {
+                var statusHistoryUri = $"/api/deployment/{ViewType}/{Id}/statushistory";
+                LoadData(statusHistoryUri);
+            }
         }
 
         public void ShowCustomEvents()

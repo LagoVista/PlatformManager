@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pge:LagoVistaContentPage     
+    xmlns:pge="clr-namespace:LagoVista.XPlat.Core;assembly=LagoVista.XPlat.Core"
+ xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LagoVista.PlatformManager.Views.InstanceSSHView">
+    <pge:LagoVistaContentPage.MainContent>
+        <Grid>
+            <Grid IsVisible="{Binding IsConnected}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Button Command="{Binding DisconnectCommand}" Text="Disconnect" HorizontalOptions="End" WidthRequest="80" />
+                <ListView  ItemsSource="{Binding ConsoleResponses}" HeightRequest="24" Grid.Row="1" x:Name="SSHResponses" BackgroundColor="Black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Line}" TextColor="LightGreen" FontFamily="Consolos" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <pge:Entry Grid.Row="2" Margin="4" ReturnCommand="{Binding SendSSHTextCommand}" Text="{Binding SSHText}" />
+            </Grid>
+            <Grid IsVisible="{Binding IsDisconnected}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="User Name" />
+                <Label Text="Password" Grid.Row="1" />
+                <pge:Entry Text="{Binding UserName}" Grid.Column="1" />
+                <pge:Entry Text="{Binding Password}" IsPassword="True" Grid.Row="1" Grid.Column="1" />
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                    <Label Text="Key" Grid.Row="2"></Label>
+                    <pge:HyperLinkLabel Text="Show Key" NavigateCommand="{Binding ShowKeyCommand}" />
+                </StackLayout>
+                <pge:TextArea Text="{Binding Key}" Margin="0,20,0,0" Grid.Row="2" Grid.ColumnSpan="2" />
+
+                <Button Command="{Binding ConnectCommand}" Grid.Column="1" Margin="4" WidthRequest="80" HorizontalOptions="End" Text="Connect" Grid.Row="3" />
+            </Grid>
+        </Grid>
+    </pge:LagoVistaContentPage.MainContent>
+</pge:LagoVistaContentPage>

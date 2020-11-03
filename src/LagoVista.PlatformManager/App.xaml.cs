@@ -86,8 +86,10 @@ namespace LagoVista.PlatformManager
             navigation.Add<SplashViewModel, Views.SplashView>();
 
             navigation.Add<MonitorInstanceViewModel, Views.MonitorInstanceView>();
+            navigation.Add<InstanceSSHViewModel, Views.InstanceSSHView>();
             navigation.Add<InstanceViewModel, Views.InstanceView>();
             navigation.Add<ListenerViewModel, Views.ListenerView>();
+            navigation.Add<AllActiveInstancesViewModel, Views.AllInstancesView>();
             navigation.Add<PipelineViewModel, Views.PipelineView>();
             navigation.Add<PlannerViewModel, Views.PlannerView>();
             navigation.Add<TelemetryViewModel, Views.TelemetryView>();

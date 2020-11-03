@@ -10,7 +10,6 @@
 
 namespace LagoVista.PlatformManager.Core.Resources {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -20,7 +19,7 @@ namespace LagoVista.PlatformManager.Core.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class PlatformManagerResources {
@@ -40,7 +39,7 @@ namespace LagoVista.PlatformManager.Core.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LagoVista.PlatformManager.Core.Resources.PlatformManagerResources", typeof(PlatformManagerResources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LagoVista.PlatformManager.Core.Resources.PlatformManagerResources", typeof(PlatformManagerResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -148,6 +147,15 @@ namespace LagoVista.PlatformManager.Core.Resources {
         public static string InstanceView_Title {
             get {
                 return ResourceManager.GetString("InstanceView_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Instances.
+        /// </summary>
+        public static string MainMenu_AllInstances {
+            get {
+                return ResourceManager.GetString("MainMenu_AllInstances", resourceCulture);
             }
         }
         
@@ -355,6 +363,15 @@ namespace LagoVista.PlatformManager.Core.Resources {
         public static string ServerActionLink_ResetContainer {
             get {
                 return ResourceManager.GetString("ServerActionLink_ResetContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSH Into Host.
+        /// </summary>
+        public static string ServerActionLink_SSH {
+            get {
+                return ResourceManager.GetString("ServerActionLink_SSH", resourceCulture);
             }
         }
         
