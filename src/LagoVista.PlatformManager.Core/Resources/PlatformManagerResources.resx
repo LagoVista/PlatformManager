@@ -189,8 +189,11 @@
   <data name="ServerActionLink_Reset" xml:space="preserve">
     <value>Reset Server</value>
   </data>
-  <data name="ServerActionLink_ResetContainer" xml:space="preserve">
-    <value>Reset Runtime</value>
+  <data name="ServerActionLink_RestartContainer" xml:space="preserve">
+    <value>Restart Container</value>
+  </data>
+  <data name="ServerActionLink_RestartHost" xml:space="preserve">
+    <value>Restart Server</value>
   </data>
   <data name="ServerActionLink_SSH" xml:space="preserve">
     <value>SSH Into Host</value>
@@ -217,10 +220,13 @@
     <value>Queued Server Remove Request</value>
   </data>
   <data name="ServerAction_SentReset" xml:space="preserve">
-    <value>Queued Server Restart Request</value>
+    <value>Queued Server Reset Request</value>
   </data>
-  <data name="ServerAction_SentResetContainer" xml:space="preserve">
+  <data name="ServerAction_SentRestartContainer" xml:space="preserve">
     <value>Queued Container Restart Request</value>
+  </data>
+  <data name="ServerAction_SentRestartHost" xml:space="preserve">
+    <value>Queued Server Restart Request</value>
   </data>
   <data name="ServerAction_SentStart" xml:space="preserve">
     <value>Queued Instance Start Request</value>

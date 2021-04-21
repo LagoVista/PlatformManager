@@ -35,7 +35,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
             ShowKeyCommand = new RelayCommand(ShowKey);
         }
 
-    `
+  
         ShellStream _stream;
 
         void ReadFromStream(ShellStream stream)

@@ -72,23 +72,23 @@
 
                 <StackLayout Grid.Row="1">
                     <StackLayout Orientation="Horizontal" IsVisible="{Binding CanReloadSolution}">
-                        <pge:IconButton Command="{Binding ReloadSolution}" IconKey="fa-wrench" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding ReloadSolution}" Text="{trs:Translate ServerActionLink_ReloadSolution}" />
+                        <pge:IconButton Command="{Binding ReloadSolutionCommand}" IconKey="fa-wrench" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding ReloadSolutionCommand}" Text="{trs:Translate ServerActionLink_ReloadSolution}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" IsVisible="{Binding CanStartApplication}">
-                        <pge:IconButton Command="{Binding StartApplication}" IconKey="fa-play" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding StartApplication}" Text="{trs:Translate ServerActionLink_Start}" />
+                        <pge:IconButton Command="{Binding StartApplicationCommand}" IconKey="fa-play" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding StartApplicationCommand}" Text="{trs:Translate ServerActionLink_Start}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" IsVisible="{Binding CanPauseApplication}">
-                        <pge:IconButton Command="{Binding PauseApplication}" IconKey="fa-pause" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding PauseApplication}" Text="{trs:Translate ServerActionLink_Pause}" />
+                        <pge:IconButton Command="{Binding PauseApplicationAcommand}" IconKey="fa-pause" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding PauseApplicationAcommand}" Text="{trs:Translate ServerActionLink_Pause}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanStopApplication}">
-                        <pge:IconButton Command="{Binding StopApplication}" IconKey="fa-stop" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding StopApplication}" Text="{trs:Translate ServerActionLink_Stop}" />
+                        <pge:IconButton Command="{Binding StopApplicationCommand}" IconKey="fa-stop" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding StopApplicationCommand}" Text="{trs:Translate ServerActionLink_Stop}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanSSHIntoHost}">
-                        <pge:IconButton Command="{Binding StopApplication}" IconKey="fa-terminal" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:IconButton Command="{Binding SSHIntoInstanceCommand}" IconKey="fa-terminal" TextColor="{StaticResource NuvIoTDark}" />
                         <pge:HyperLinkLabel NavigateCommand="{Binding SSHIntoInstanceCommand}" Text="{trs:Translate ServerActionLink_SSH}" />
                     </StackLayout>
                 </StackLayout>
@@ -100,15 +100,19 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanUpdateRuntime}">
                         <pge:IconButton Command="{Binding UpdateRuntime}" IconKey="fa-wrench" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding UpdateRuntime}" Text="{trs:Translate ServerActionLink_UpdateRuntime}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding UpdateRuntimeCommand}" Text="{trs:Translate ServerActionLink_UpdateRuntime}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanRestartContainer}">
-                        <pge:IconButton Command="{Binding RestartContainer}" IconKey="fa-recycle" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding RestartContainer}" Text="{trs:Translate ServerActionLink_ResetContainer}" />
+                        <pge:IconButton Command="{Binding RestartContainerCommand}" IconKey="fa-recycle" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding RestartContainerCommand}" Text="{trs:Translate ServerActionLink_RestartContainer}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"  >
+                        <pge:IconButton Command="{Binding ResetInstanceCommand}" IconKey="fa-recycle" TextColor="{StaticResource NuvIoTDark}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding ResetInstanceCommand}" Text="{trs:Translate ServerActionLink_Reset}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"  IsVisible="{Binding CanRestartServer}">
                         <pge:IconButton Command="{Binding RestartHost}" IconKey="fa-recycle" TextColor="{StaticResource NuvIoTDark}" />
-                        <pge:HyperLinkLabel NavigateCommand="{Binding RestartHost}" Text="{trs:Translate ServerActionLink_Reset}" />
+                        <pge:HyperLinkLabel NavigateCommand="{Binding RestartHostCommand}" Text="{trs:Translate ServerActionLink_RestartHost}" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" IsVisible="{Binding CanRemoveServer}">
                         <pge:IconButton Command="{Binding RemoveServerCommand}" IconKey="fa-remove" TextColor="{StaticResource NuvIoTDark}" />

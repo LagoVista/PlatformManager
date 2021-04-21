@@ -268,7 +268,7 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Queued Server Restart Request.
+        ///   Looks up a localized string similar to Queued Server Reset Request.
         /// </summary>
         public static string ServerAction_SentReset {
             get {
@@ -279,9 +279,18 @@ namespace LagoVista.PlatformManager.Core.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Queued Container Restart Request.
         /// </summary>
-        public static string ServerAction_SentResetContainer {
+        public static string ServerAction_SentRestartContainer {
             get {
-                return ResourceManager.GetString("ServerAction_SentResetContainer", resourceCulture);
+                return ResourceManager.GetString("ServerAction_SentRestartContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued Server Restart Request.
+        /// </summary>
+        public static string ServerAction_SentRestartHost {
+            get {
+                return ResourceManager.GetString("ServerAction_SentRestartHost", resourceCulture);
             }
         }
         
@@ -358,11 +367,20 @@ namespace LagoVista.PlatformManager.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reset Runtime.
+        ///   Looks up a localized string similar to Restart Container.
         /// </summary>
-        public static string ServerActionLink_ResetContainer {
+        public static string ServerActionLink_RestartContainer {
             get {
-                return ResourceManager.GetString("ServerActionLink_ResetContainer", resourceCulture);
+                return ResourceManager.GetString("ServerActionLink_RestartContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restart Server.
+        /// </summary>
+        public static string ServerActionLink_RestartHost {
+            get {
+                return ResourceManager.GetString("ServerActionLink_RestartHost", resourceCulture);
             }
         }
         

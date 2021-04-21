@@ -13,7 +13,7 @@ namespace LagoVista.PlatformManager.Core.ViewModels
 
         protected override async void ItemSelected(DeploymentInstanceSummary model)
         {
-            await NavigateAndViewAsync<InstanceViewModel>(model.Id);
+            await NavigateAndViewAsync<MonitorInstanceViewModel>(model.Id);
         }
     }
 }

@@ -286,13 +286,14 @@ namespace LagoVista.PlatformManager.Core.ViewModels
         {
             DeployHostCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "deployhost", Resources.PlatformManagerResources.ServerAction_SentDeploy));
             RemoveServerCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "destroyhost", Resources.PlatformManagerResources.ServerAction_SentRemove));
-            RestartContainer = new RelayCommand(() => SendAction(ResourceType.Instance, "resetartcontainer", Resources.PlatformManagerResources.ServerAction_SentResetContainer));
-            RestartHost = new RelayCommand(() => SendAction(ResourceType.Instance, "restarthost", Resources.PlatformManagerResources.ServerAction_SentReset));
-            StartApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "start", Resources.PlatformManagerResources.ServerAction_SentStart));
-            PauseApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "pause", Resources.PlatformManagerResources.ServerAction_SentPause));
-            StopApplication = new RelayCommand(() => SendAction(ResourceType.Instance, "stop", Resources.PlatformManagerResources.ServerAction_SentStop));
-            ReloadSolution = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
-            UpdateRuntime = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
+            RestartContainerCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "resetartcontainer", Resources.PlatformManagerResources.ServerAction_SentRestartContainer));
+            RestartHostCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "restarthost", Resources.PlatformManagerResources.ServerAction_SentRestartHost));
+            ResetInstanceCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "reset", Resources.PlatformManagerResources.ServerAction_SentReset));
+            StartApplicationCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "start", Resources.PlatformManagerResources.ServerAction_SentStart));
+            PauseApplicationAcommand = new RelayCommand(() => SendAction(ResourceType.Instance, "pause", Resources.PlatformManagerResources.ServerAction_SentPause));
+            StopApplicationCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "stop", Resources.PlatformManagerResources.ServerAction_SentStop));
+            ReloadSolutionCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "reloadsolution", Resources.PlatformManagerResources.ServerAction_SentReloadSolution));
+            UpdateRuntimeCommand = new RelayCommand(() => SendAction(ResourceType.Instance, "updateruntime", Resources.PlatformManagerResources.ServerAction_SentUpdateRuntime));
 
             SSHIntoInstanceCommand = new RelayCommand(SSHIntoInstance);
             ShowInstanceTelemetryCommand = new RelayCommand(ShowInstanceTelemetry);
@@ -354,13 +355,14 @@ namespace LagoVista.PlatformManager.Core.ViewModels
 
         public RelayCommand DeployHostCommand { get; private set; }
         public RelayCommand RemoveServerCommand { get; private set; }
-        public RelayCommand RestartContainer { get; private set; }
-        public RelayCommand RestartHost { get; private set; }
-        public RelayCommand StartApplication { get; private set; }
-        public RelayCommand PauseApplication { get; private set; }
-        public RelayCommand StopApplication { get; private set; }
-        public RelayCommand ReloadSolution { get; private set; }
-        public RelayCommand UpdateRuntime { get; private set; }
+        public RelayCommand RestartContainerCommand { get; private set; }
+        public RelayCommand ResetInstanceCommand { get; private set; }
+        public RelayCommand RestartHostCommand { get; private set; }
+        public RelayCommand StartApplicationCommand { get; private set; }
+        public RelayCommand PauseApplicationAcommand { get; private set; }
+        public RelayCommand StopApplicationCommand { get; private set; }
+        public RelayCommand ReloadSolutionCommand { get; private set; }
+        public RelayCommand UpdateRuntimeCommand { get; private set; }
 
         public RelayCommand SSHIntoInstanceCommand { get; private set; }
         public RelayCommand ShowHostTelemetryCommand { get; private set; }
